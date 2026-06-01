@@ -132,17 +132,6 @@ export default function Hero() {
             {/* Image container */}
             <div className="relative w-72 h-80 sm:w-80 sm:h-[360px] rounded-2xl overflow-hidden bg-[#1A1A1A] border border-[#2A2A2A]">
               <Image src="/frank.jpg" alt="Sunday Frank Ochigbo" fill className="object-cover" priority />
-              
-              {/* Bottom gradient overlay for name */}
-              <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#0A0A0A] to-transparent" />
-              <div className="absolute bottom-4 left-5 right-5">
-                <p className="text-white font-bold text-lg leading-tight">Frank Ochigbo</p>
-                <div className="flex items-center gap-2 mt-1">
-                  <span className="text-[11px] text-[#F87171] font-mono">B.Sc. Cyber Security</span>
-                  <span className="text-[#475569]">•</span>
-                  <span className="text-[11px] text-[#94A3B8] font-mono">CGPA 4.34</span>
-                </div>
-              </div>
             </div>
 
             {/* Decorative corner accents */}
