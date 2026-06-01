@@ -62,6 +62,7 @@ db/
 /mini-services/
 /examples/
 /download/
+/upload/
 worklog.md
 .claude/
 .z-ai-config/
