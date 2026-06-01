@@ -119,6 +119,22 @@ const projects: Project[] = [
     status: 'Live',
   },
   {
+    title: 'Xapper',
+    subtitle: 'Automated Trading Bot',
+    description: 'An automated trading bot designed for precision entry and exit in the financial markets, featuring signal-based trade execution and risk management protocols.',
+    category: ['trading'],
+    techStack: ['MQL5', 'MetaTrader 5'],
+    highlights: [
+      'Automated signal-based trade execution',
+      'Integrated risk management protocols',
+      'Precision entry and exit logic',
+      'Deployed on MetaTrader 5 platform',
+    ],
+    icon: Bot,
+    color: '#DC2626',
+    status: 'Completed',
+  },
+  {
     title: 'RL Trading Bot (PPO Agent)',
     subtitle: 'Reinforcement Learning Trading',
     description: 'A reinforcement learning trading bot using Stable-Baselines3 PPO agent, integrated with MetaTrader 5 via ZeroMQ bridge for automated XAUUSD trading.',
