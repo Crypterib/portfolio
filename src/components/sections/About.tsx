@@ -39,10 +39,11 @@ export default function About() {
             </div>
             <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-sm">
               <p className="text-[#334155] leading-[1.85] text-[15px]">
-                I specialize in building high-performance applications — from Web3 security dashboards and automated trading 
-                infrastructure to AI-driven reconnaissance systems. My experience spans penetration testing at NNPCL with 
-                Pentera, co-implementing Data Loss Prevention solutions in critical national infrastructure, and developing 
-                algorithmic trading bots for the financial markets.
+                My work cuts across smart contract auditing, full-stack web development, and algorithmic trading. 
+                I&apos;ve done penetration testing at NNPCL using Pentera, helped implement a Data Loss Prevention 
+                solution for critical national infrastructure, and built several trading bots running on MetaTrader 5. 
+                Whether it&apos;s a Web3 dashboard, a sentiment analysis tool, or an asset management system, I enjoy 
+                shipping things that work.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">

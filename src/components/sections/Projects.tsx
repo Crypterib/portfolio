@@ -77,7 +77,7 @@ const projects: Project[] = [
     image: '/projects/certrepo.png',
   },
   {
-    title: 'Project Nami',
+    title: 'Nami',
     subtitle: 'Web3 Intelligence Dashboard',
     description: 'A Web3 intelligence dashboard engineered for hackathon environments, utilizing the GoldRush API to aggregate on-chain data for real-time transaction tracking and security monitoring.',
     category: ['blockchain', 'fullstack'],
@@ -147,7 +147,7 @@ const projects: Project[] = [
     link: 'https://zurich-tech.vercel.app/',
   },
   {
-    title: 'SASP — Student Assignment Portal',
+    title: 'SASP (Student Assignment Portal)',
     subtitle: 'Academic Management System',
     description: 'A full-stack assignment submission and grading portal featuring student, lecturer, and admin portals with file upload, grading workflows, and PDF report export.',
     category: ['fullstack'],
@@ -228,7 +228,7 @@ const projects: Project[] = [
     status: 'Research',
   },
   {
-    title: 'Project AURA',
+    title: 'AURA',
     subtitle: 'Autonomous Agricultural Recon',
     description: 'An advanced proposal-stage project designing an autonomous drone-based agricultural reconnaissance system for pest and rodent control in large-scale farming.',
     category: ['fullstack', 'cybersecurity'],

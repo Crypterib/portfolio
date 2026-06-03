@@ -52,7 +52,7 @@ export default function Hero() {
                 <span className="accent-gradient"> Security</span>
                 <br />
                 <span className="text-[#64748B]">Analyst &</span>
-                <span className="text-[#F1F5F9]"> Blockchain</span>
+                <span className="text-[#F1F5F9]"> Software</span>
                 <span className="accent-gradient"> Dev</span>
               </h1>
             </motion.div>
@@ -65,8 +65,8 @@ export default function Hero() {
               className="space-y-4"
             >
               <p className="text-[#94A3B8] leading-relaxed max-w-lg text-[15px] mx-auto lg:mx-0">
-                Building secure systems at the intersection of cybersecurity, blockchain technology, 
-                and intelligent software — from smart contract auditing to algorithmic trading.
+                Cybersecurity analyst and software developer working across smart contract security, 
+                full-stack development, and algorithmic trading systems.
               </p>
 
               {/* Quick stats row */}
