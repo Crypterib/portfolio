@@ -29,21 +29,21 @@ export default function About() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 }} className="lg:col-span-7 space-y-5">
             <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-sm">
               <p className="text-[#334155] leading-[1.85] text-[15px]">
-                I&apos;m <span className="text-[#1E293B] font-semibold">Sunday Frank Ochigbo</span> — a cybersecurity analyst and 
-                software developer with a deep academic and practical foundation in cybersecurity. Holding a{' '}
-                <span className="text-[#DC2626] font-medium">B.Sc. in Cyber Security</span> from the{' '}
-                <span className="text-[#1E293B] font-medium">Air Force Institute of Technology</span> (CGPA: 4.34) and currently 
-                pursuing an <span className="text-[#DC2626] font-medium">M.Sc. in Communication Information Systems</span>, my work 
-                bridges secure systems architecture, full-stack development, and decentralized technologies.
+                I go by <span className="text-[#1E293B] font-semibold">Frank</span>. Cybersecurity analyst and software developer 
+                based in Abuja, with a <span className="text-[#DC2626] font-medium">B.Sc. in Cyber Security</span> from AFIT and 
+                an <span className="text-[#DC2626] font-medium">M.Sc. in Communication Information Systems</span> currently in view. 
+                My background spans penetration testing, enterprise IT support, and full-stack development across both private 
+                and public sector environments.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] shadow-sm">
               <p className="text-[#334155] leading-[1.85] text-[15px]">
-                My work cuts across smart contract auditing, full-stack web development, and algorithmic trading. 
-                I&apos;ve done penetration testing at NNPCL using Pentera, helped implement a Data Loss Prevention 
-                solution for critical national infrastructure, and built several trading bots running on MetaTrader 5. 
-                Whether it&apos;s a Web3 dashboard, a sentiment analysis tool, or an asset management system, I enjoy 
-                shipping things that work.
+                I have done real work inside serious environments — from running vulnerability assessments and deploying Data 
+                Loss Prevention solutions across critical national infrastructure, to keeping enterprise systems alive at a 
+                federal regulatory agency. That kind of exposure changes how you think about building software. Security stops 
+                being an afterthought and becomes part of how you approach everything. I like working at the edge of things, 
+                where security meets software or where finance meets code. If the problem is unconventional, I am probably 
+                already interested.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
