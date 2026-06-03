@@ -63,9 +63,7 @@ export default function Navigation() {
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <div className="flex items-center justify-between h-16">
             <button onClick={() => scrollToSection('#home')} className="flex items-center gap-2.5 group">
-              <div className="w-8 h-8 rounded-lg bg-[#DC2626] flex items-center justify-center shadow-lg shadow-[#DC2626]/20">
-                <span className="text-white font-black text-sm">SF</span>
-              </div>
+              <img src="/logo.png" alt="Frank" className="w-8 h-8 rounded-lg shadow-lg shadow-[#DC2626]/20" />
               <span className={`text-[15px] font-bold tracking-tight hidden sm:block transition-colors ${
                 isDark ? 'text-white' : 'text-[#111111]'
               }`}>

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: "Portfolio of Sunday Frank Ochigbo — Cybersecurity Analyst specializing in Smart Contract Security, Vulnerability Assessment, and Blockchain Research.",
   keywords: ["Cybersecurity", "Blockchain", "Smart Contract", "Penetration Testing", "Frank Ochigbo"],
   authors: [{ name: "Sunday Frank Ochigbo" }],
-  icons: { icon: "/frank.jpg" },
+  icons: { icon: "/logo.png" },
   openGraph: {
     title: "Sunday Frank Ochigbo — Cybersecurity Analyst & Blockchain Researcher",
     description: "Cybersecurity Analyst specializing in Smart Contract Security, Vulnerability Assessment, and Blockchain Research.",

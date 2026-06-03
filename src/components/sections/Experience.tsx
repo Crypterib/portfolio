@@ -9,7 +9,7 @@ const experiences = [
     title: 'IT Support Personnel',
     org: 'Infrastructure Concession Regulatory Commission (ICRC)',
     location: 'Abuja, Nigeria',
-    period: '2024 – Present',
+    period: 'Jan 2025 – Jan 2026',
     tag: 'NYSC',
     icon: Monitor,
     color: '#DC2626',

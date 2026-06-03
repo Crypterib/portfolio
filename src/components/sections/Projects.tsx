@@ -55,24 +55,24 @@ const projects: Project[] = [
       'Static analysis with Slither, Surya & Ethlint',
     ],
     icon: Shield,
-    color: '#DC2626',
+    color: '#1E293B',
     status: 'Completed',
     image: '/projects/smart-contract-scanner.png',
   },
   {
     title: 'CertRepo',
     subtitle: 'Blockchain Certificate Platform',
-    description: 'A blockchain-based platform for certificate issuance and authentication in Nigerian universities — built as a B.Sc. thesis project implementing immutable digital certificates stored on-chain for instant verification and fraud elimination.',
+    description: 'A blockchain-based platform for certificate issuance and authentication in Nigerian universities, implementing immutable digital certificates stored on-chain for instant verification and fraud elimination.',
     category: ['blockchain', 'fullstack'],
     techStack: ['Solidity', 'Smart Contracts', 'Web3', 'React'],
     highlights: [
       'Immutable on-chain certificate issuance',
       'Instant verification eliminating fraud',
       'Built for Nigerian university systems',
-      'B.Sc. thesis: Blockchain for Certificate Authentication',
+      'Eliminates paper-based certificate fraud',
     ],
     icon: Shield,
-    color: '#DC2626',
+    color: '#1E293B',
     status: 'Completed',
     image: '/projects/certrepo.png',
   },
@@ -107,7 +107,7 @@ const projects: Project[] = [
       'Downloadable PDF sentiment reports',
     ],
     icon: Globe,
-    color: '#DC2626',
+    color: '#1E293B',
     status: 'Completed',
     image: '/projects/tweetmood.png',
   },
@@ -141,7 +141,7 @@ const projects: Project[] = [
       'Clean, accessible UI/UX',
     ],
     icon: Globe,
-    color: '#DC2626',
+    color: '#1E293B',
     status: 'Deployed',
     image: '/projects/zurichtech.png',
     link: 'https://zurich-tech.vercel.app/',
@@ -176,7 +176,7 @@ const projects: Project[] = [
       'BSC network integration',
     ],
     icon: Lock,
-    color: '#DC2626',
+    color: '#1E293B',
     status: 'Hackathon',
   },
   {
@@ -208,7 +208,7 @@ const projects: Project[] = [
       'Deployed on MetaTrader 5 platform',
     ],
     icon: Bot,
-    color: '#DC2626',
+    color: '#1E293B',
     status: 'Completed',
   },
   {
@@ -224,7 +224,7 @@ const projects: Project[] = [
       'XAUUSD market training pipeline',
     ],
     icon: Bot,
-    color: '#DC2626',
+    color: '#1E293B',
     status: 'Research',
   },
   {
@@ -240,7 +240,7 @@ const projects: Project[] = [
       'Public sector applications',
     ],
     icon: Leaf,
-    color: '#DC2626',
+    color: '#1E293B',
     status: 'Proposal',
   },
 ]
@@ -349,15 +349,15 @@ export default function Projects() {
                 )}
 
                 <div className="p-5 flex flex-col flex-grow">
-                  <div className="flex items-center gap-2 mb-0.5">
-                    <h3 className="text-[15px] font-semibold text-[#1E293B]">{project.title}</h3>
+                  <h3 className="text-[15px] font-semibold text-[#1E293B] mb-0.5">{project.title}</h3>
+                  <div className="flex items-center gap-2 mb-2.5">
+                    <p className="text-xs font-medium text-[#DC2626]">{project.subtitle}</p>
                     {!project.image && project.link && (
                       <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-[#94A3B8] hover:text-[#DC2626] transition-colors">
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                     )}
                   </div>
-                  <p className="text-xs font-medium mb-2.5" style={{ color: project.color }}>{project.subtitle}</p>
                   <p className="text-sm text-[#334155] leading-relaxed mb-3 line-clamp-2 flex-grow">{project.description}</p>
 
                   <ul className="space-y-1 mb-3">
