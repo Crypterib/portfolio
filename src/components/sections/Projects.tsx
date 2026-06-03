@@ -2,9 +2,10 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
+import Image from 'next/image'
 import {
-  Shield, Bot, Code2, Globe, FileCheck, TrendingUp,
-  Lock, Leaf, Package, MessageSquare
+  Shield, Bot, TrendingUp, Globe, FileCheck,
+  Lock, Leaf, Package, ExternalLink
 } from 'lucide-react'
 
 type ProjectCategory = 'all' | 'blockchain' | 'trading' | 'cybersecurity' | 'fullstack'
@@ -19,9 +20,28 @@ interface Project {
   icon: React.ElementType
   color: string
   status: string
+  image?: string
+  link?: string
 }
 
 const projects: Project[] = [
+  {
+    title: 'EduQuest',
+    subtitle: 'Quiz-Based Learning Platform',
+    description: 'An interactive quiz-based learning platform designed to make education engaging and accessible, featuring real-time quizzes, progress tracking, and gamified learning experiences.',
+    category: ['fullstack'],
+    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma'],
+    highlights: [
+      'Interactive quiz-based learning system',
+      'Real-time progress tracking',
+      'Gamified learning experience',
+      'Responsive, accessible interface',
+    ],
+    icon: FileCheck,
+    color: '#1E293B',
+    status: 'Completed',
+    image: '/projects/eduquest.png',
+  },
   {
     title: 'Smart Contract Analyzer',
     subtitle: 'Automated Vulnerability Scanner',
@@ -37,38 +57,24 @@ const projects: Project[] = [
     icon: Shield,
     color: '#DC2626',
     status: 'Completed',
+    image: '/projects/smart-contract-scanner.png',
   },
   {
-    title: 'Kite Assets',
-    subtitle: 'Asset Management System',
-    description: 'A secure, lightweight, multi-tenant Asset Management System designed to improve accountability and efficiency in organizations. Features QR code integration, role-based access control, and automated asset lifecycle management.',
-    category: ['fullstack'],
-    techStack: ['Next.js', 'TypeScript', 'Prisma ORM', 'Tailwind CSS', 'PostgreSQL'],
+    title: 'CertRepo',
+    subtitle: 'Blockchain Certificate Platform',
+    description: 'A blockchain-based platform for certificate issuance and authentication in Nigerian universities — built as a B.Sc. thesis project implementing immutable digital certificates stored on-chain for instant verification and fraud elimination.',
+    category: ['blockchain', 'fullstack'],
+    techStack: ['Solidity', 'Smart Contracts', 'Web3', 'React'],
     highlights: [
-      'Multi-tenant architecture with RBAC',
-      'QR code integration for asset verification',
-      'Automated asset lifecycle management',
-      'Scalable reporting with CSV export',
+      'Immutable on-chain certificate issuance',
+      'Instant verification eliminating fraud',
+      'Built for Nigerian university systems',
+      'B.Sc. thesis: Blockchain for Certificate Authentication',
     ],
-    icon: Package,
-    color: '#1E293B',
-    status: 'Completed',
-  },
-  {
-    title: 'TweetMood Sentiment Analyzer',
-    subtitle: 'Real-time Sentiment Dashboard',
-    description: 'A web-based sentiment analysis dashboard for trend monitoring and opinion mining, integrating NLP and machine learning to classify tweets in real time using the Twitter API v2.',
-    category: ['fullstack'],
-    techStack: ['Next.js', 'FastAPI', 'Python', 'Twitter API v2', 'TF-IDF', 'Logistic Regression'],
-    highlights: [
-      'Real-time tweet collection via Twitter API v2',
-      'NLP-powered sentiment classification',
-      'Interactive dashboards with word clouds',
-      'Downloadable PDF sentiment reports',
-    ],
-    icon: MessageSquare,
+    icon: Shield,
     color: '#DC2626',
     status: 'Completed',
+    image: '/projects/certrepo.png',
   },
   {
     title: 'Project Nami',
@@ -85,6 +91,77 @@ const projects: Project[] = [
     icon: Globe,
     color: '#1E293B',
     status: 'Hackathon',
+    image: '/projects/nami.png',
+    link: 'https://nami-intelligence.vercel.app/',
+  },
+  {
+    title: 'TweetMood Sentiment Analyzer',
+    subtitle: 'Real-time Sentiment Dashboard',
+    description: 'A web-based sentiment analysis dashboard for trend monitoring and opinion mining, integrating NLP and machine learning to classify tweets in real time using the Twitter API v2.',
+    category: ['fullstack'],
+    techStack: ['Next.js', 'FastAPI', 'Python', 'Twitter API v2', 'TF-IDF', 'Logistic Regression'],
+    highlights: [
+      'Real-time tweet collection via Twitter API v2',
+      'NLP-powered sentiment classification',
+      'Interactive dashboards with word clouds',
+      'Downloadable PDF sentiment reports',
+    ],
+    icon: Globe,
+    color: '#DC2626',
+    status: 'Completed',
+    image: '/projects/tweetmood.png',
+  },
+  {
+    title: 'Kite Assets',
+    subtitle: 'Asset Management System',
+    description: 'A secure, lightweight, multi-tenant Asset Management System designed to improve accountability and efficiency in organizations. Features QR code integration, role-based access control, and automated asset lifecycle management.',
+    category: ['fullstack'],
+    techStack: ['Next.js', 'TypeScript', 'Prisma ORM', 'Tailwind CSS', 'PostgreSQL'],
+    highlights: [
+      'Multi-tenant architecture with RBAC',
+      'QR code integration for asset verification',
+      'Automated asset lifecycle management',
+      'Scalable reporting with CSV export',
+    ],
+    icon: Package,
+    color: '#1E293B',
+    status: 'Completed',
+    image: '/projects/kite-assets.png',
+  },
+  {
+    title: 'Zurichtech',
+    subtitle: 'Web Design & Development',
+    description: 'Professional website built for Zurichtech — a modern web presence showcasing technology services with responsive design, clean UI, and optimized performance.',
+    category: ['fullstack'],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS'],
+    highlights: [
+      'Modern responsive web design',
+      'Professional service showcase',
+      'Performance-optimized build',
+      'Clean, accessible UI/UX',
+    ],
+    icon: Globe,
+    color: '#DC2626',
+    status: 'Deployed',
+    image: '/projects/zurichtech.png',
+    link: 'https://zurich-tech.vercel.app/',
+  },
+  {
+    title: 'SASP — Student Assignment Portal',
+    subtitle: 'Academic Management System',
+    description: 'A full-stack assignment submission and grading portal featuring student, lecturer, and admin portals with file upload, grading workflows, and PDF report export.',
+    category: ['fullstack'],
+    techStack: ['Flask', 'MySQL', 'JavaScript', 'HTML/CSS'],
+    highlights: [
+      'Student registration & file upload',
+      'Lecturer grading & submission review',
+      'Admin portal with user management',
+      'PDF report export & course selection',
+    ],
+    icon: FileCheck,
+    color: '#1E293B',
+    status: 'Completed',
+    image: '/projects/sasp.png',
   },
   {
     title: 'PayShield',
@@ -149,38 +226,6 @@ const projects: Project[] = [
     icon: Bot,
     color: '#DC2626',
     status: 'Research',
-  },
-  {
-    title: 'SASP — Student Assignment Portal',
-    subtitle: 'Academic Management System',
-    description: 'A full-stack assignment submission and grading portal — B.Sc. final year project for Nasarawa State University — featuring student, lecturer, and admin portals.',
-    category: ['fullstack'],
-    techStack: ['Flask', 'MySQL', 'JavaScript', 'HTML/CSS'],
-    highlights: [
-      'Student registration & file upload',
-      'Lecturer grading & submission review',
-      'Admin portal with user management',
-      'PDF report export & course selection',
-    ],
-    icon: FileCheck,
-    color: '#1E293B',
-    status: 'Completed',
-  },
-  {
-    title: 'Zurichtech',
-    subtitle: 'Web Design & Development',
-    description: 'Professional website built for Zurichtech — a modern web presence showcasing technology services with responsive design, clean UI, and optimized performance.',
-    category: ['fullstack'],
-    techStack: ['React', 'TypeScript', 'Tailwind CSS'],
-    highlights: [
-      'Modern responsive web design',
-      'Professional service showcase',
-      'Performance-optimized build',
-      'Clean, accessible UI/UX',
-    ],
-    icon: Globe,
-    color: '#DC2626',
-    status: 'Deployed',
   },
   {
     title: 'Project AURA',
@@ -264,36 +309,73 @@ export default function Projects() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.1 + i * 0.04 }}
                 layout
-                className="bg-white rounded-2xl p-5 border border-[#E2E8F0] card-lift flex flex-col shadow-sm"
+                className="bg-white rounded-2xl border border-[#E2E8F0] card-lift flex flex-col shadow-sm overflow-hidden"
               >
-                <div className="flex items-start justify-between mb-3">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${project.color}08` }}>
-                    <project.icon className="w-5 h-5" style={{ color: project.color }} />
-                  </div>
-                  <span className="px-2 py-0.5 rounded-md text-[10px] font-semibold" style={{ backgroundColor: statusStyle.bg, color: statusStyle.text }}>
-                    {project.status}
-                  </span>
-                </div>
-
-                <h3 className="text-[15px] font-semibold text-[#1E293B] mb-0.5">{project.title}</h3>
-                <p className="text-xs font-medium mb-2.5" style={{ color: project.color }}>{project.subtitle}</p>
-                <p className="text-sm text-[#334155] leading-relaxed mb-3 line-clamp-2 flex-grow">{project.description}</p>
-
-                <ul className="space-y-1 mb-3">
-                  {project.highlights.slice(0, 3).map((h, j) => (
-                    <li key={j} className="flex items-start gap-2 text-xs text-[#475569]">
-                      <span className="mt-1 w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor: project.color }} />
-                      {h}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="flex flex-wrap gap-1.5 pt-3 border-t border-[#F1F5F9]">
-                  {project.techStack.map((tech) => (
-                    <span key={tech} className="px-2 py-0.5 rounded-md bg-[#F8FAFC] text-[10px] font-mono text-[#475569] border border-[#E2E8F0]">
-                      {tech}
+                {/* Project Screenshot or Icon Header */}
+                {project.image ? (
+                  <div className="relative w-full h-40 bg-[#F8FAFC] overflow-hidden group">
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} screenshot`}
+                      fill
+                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Status badge overlaid on image */}
+                    <span className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md text-[10px] font-semibold backdrop-blur-sm" style={{ backgroundColor: `${statusStyle.bg.replace('08', 'CC')}`, color: statusStyle.text }}>
+                      {project.status}
                     </span>
-                  ))}
+                    {/* Link overlay */}
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#1E293B] hover:text-[#DC2626] hover:bg-white transition-all shadow-sm"
+                        title="Visit live site"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
+                ) : (
+                  <div className="flex items-start justify-between p-5 pb-0">
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${project.color}08` }}>
+                      <project.icon className="w-5 h-5" style={{ color: project.color }} />
+                    </div>
+                    <span className="px-2 py-0.5 rounded-md text-[10px] font-semibold" style={{ backgroundColor: statusStyle.bg, color: statusStyle.text }}>
+                      {project.status}
+                    </span>
+                  </div>
+                )}
+
+                <div className="p-5 flex flex-col flex-grow">
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <h3 className="text-[15px] font-semibold text-[#1E293B]">{project.title}</h3>
+                    {!project.image && project.link && (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-[#94A3B8] hover:text-[#DC2626] transition-colors">
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
+                  <p className="text-xs font-medium mb-2.5" style={{ color: project.color }}>{project.subtitle}</p>
+                  <p className="text-sm text-[#334155] leading-relaxed mb-3 line-clamp-2 flex-grow">{project.description}</p>
+
+                  <ul className="space-y-1 mb-3">
+                    {project.highlights.slice(0, 3).map((h, j) => (
+                      <li key={j} className="flex items-start gap-2 text-xs text-[#475569]">
+                        <span className="mt-1 w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor: project.color }} />
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-1.5 pt-3 border-t border-[#F1F5F9]">
+                    {project.techStack.map((tech) => (
+                      <span key={tech} className="px-2 py-0.5 rounded-md bg-[#F8FAFC] text-[10px] font-mono text-[#475569] border border-[#E2E8F0]">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             )
